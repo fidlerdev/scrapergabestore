@@ -1,2 +1,5 @@
 httpx
 pandas
+bs4
+lxml
+openpyxl
