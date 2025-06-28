@@ -150,7 +150,7 @@ def parse_search_page(page):
         img_url = urljoin("https://gabestore.ru", img_tag["src"]).strip()
 
         # Скачиваем изображение
-        img_filename = download_image(img_url, name.replace(" ", "_"))
+        # img_filename = download_image(img_url, name.replace(" ", "_"))
 
         print(f"Обрабатываем игру: {name} | Цена: {price}")
 
@@ -164,7 +164,8 @@ def parse_search_page(page):
             "Название": name,
             "Цена": price,
             "Ссылка": link,
-            "Картинка": img_filename or "",
+            # "Картинка": img_filename or "",
+            "Изображение(ссылка)": img_url,
             **details,
         }
 
